@@ -105,7 +105,7 @@ De acuerdo con la sección 5.5.2 del syllabus, la variación entre el individuo 
 
 El análisis manuscrito emplea el **principio de superposición** para obtener dos contribuciones a la fuerza de salida equivalente **Fₛ(t)**.
 
-**[Consultar el desarrollo matemático completo (PDF)](analisis/Analisis_matematico.pdf)**
+**[Consultar el desarrollo matemático completo (PDF)](analisis/Analisismatematico.pdf)**
 
 ### 1. Contribuciones del sistema
 
