@@ -46,7 +46,7 @@ Esta práctica toma como base la **sección 5.5 del syllabus (2026)** y emplea u
 
 El modelo descrito en la figura 5.3 del syllabus representa las propiedades **contráctiles, viscosas y elásticas** de una unidad musculotendinosa.
 
-[![Diagrama biológico y modelo mecánico del sistema musculoesquelético](biorender/Biorender.png)](biorender/Biorender.png)
+[![Diagrama biológico y modelo mecánico del sistema musculoesquelético](Biorender.png)](Biorender.png)
 
 <p align="center"><em>Figura 1. Diagrama fisiológico y modelo mecánico equivalente: componente contráctil, amortiguamiento viscoso, estructuras elásticas musculares y tendón.</em></p>
 
@@ -105,7 +105,7 @@ De acuerdo con la sección 5.5.2 del syllabus, la variación entre el individuo 
 
 El análisis manuscrito emplea el **principio de superposición** para obtener dos contribuciones a la fuerza de salida equivalente **Fₛ(t)**.
 
-**[Consultar el desarrollo matemático completo (PDF)](analisis/Analisismatematico.pdf)**
+**[Consultar el desarrollo matemático completo (PDF)](Ana%CC%81lisismatematico.pdf)**
 
 ### 1. Contribuciones del sistema
 
@@ -153,7 +153,7 @@ Sustituyendo los valores de la tabla anterior:
   <strong>G<sub>caso</sub>(s) = (0.1s + 0.75) / (1.1s + 1)</strong>
 </p>
 
-Estas son las funciones definidas en [**modeladopython.py**](python/modeladopython.py) y empleadas en las simulaciones incluidas en el repositorio.
+Estas son las funciones definidas en [**modeladopython.py**](modeladopython.py) y empleadas en las simulaciones incluidas en el repositorio.
 
 ### 4. Representación mediante ecuaciones diferenciales
 
@@ -247,9 +247,11 @@ Las configuraciones concretas de los controladores pueden consultarse en los arc
 
 ### Comparación de las respuestas
 
-[![Entrada, respuesta del control, respuesta del caso y sistema compensado](figuras/respuesta_simulink.png)](figuras/respuesta_simulink.png)
+**Figura 2. Comparación de respuestas en MATLAB/Simulink**
 
-*Figura 2. Comparación de las respuestas obtenidas en MATLAB/Simulink ante la señal de entrada. Se muestran el individuo sano, el caso simulado y la salida compensada.*
+[**Consultar la gráfica original de MATLAB/Simulink (PDF)**](Im%C3%A1genes%20python%2Cmatlab/_matlabsimulink.pdf)
+
+*Se comparan la señal de entrada, la respuesta del individuo sano, el caso simulado y la salida compensada. La gráfica se encuentra en el PDF original del repositorio.*
 
 **Observaciones principales:**
 
@@ -258,7 +260,7 @@ Las configuraciones concretas de los controladores pueden consultarse en los arc
 - El modelo **caso** presenta una evolución más lenta por el aumento de R.
 - La curva del **sistema compensado** se aproxima visualmente a la respuesta del control en la gráfica suministrada.
 
-**Gráficas originales:** [MATLAB/Simulink (PDF)](figuras/_matlabsimulink.pdf) · [Modelo por EDO (PDF)](figuras/_matlabEDOsys.pdf) · [MATLAB (PDF)](figuras/_matlab.pdf).
+**Gráficas originales:** [Python (PDF)](Im%C3%A1genes%20python%2Cmatlab/Musculoesqueletico_python.pdf) · [MATLAB/Simulink (PDF)](Im%C3%A1genes%20python%2Cmatlab/_matlabsimulink.pdf) · [Modelo por EDO (PDF)](Im%C3%A1genes%20python%2Cmatlab/_matlabEDOsys.pdf) · [MATLAB (PDF)](Im%C3%A1genes%20python%2Cmatlab/_matlab.pdf).
 
 La comparación cuantitativa entre plataformas requeriría utilizar exactamente las mismas condiciones iniciales, señales de entrada y configuraciones de controlador en cada implementación.
 
@@ -266,33 +268,32 @@ La comparación cuantitativa entre plataformas requeriría utilizar exactamente 
 
 ### Organización del repositorio
 
+Los enlaces de esta sección corresponden a los nombres y carpetas que están publicados en la rama `main` del repositorio. Para visualizar una gráfica PDF, utiliza el enlace **Consultar** o **PDF**; GitHub no la incrusta automáticamente como una imagen.
+
 ```text
 MSFP3/
 ├── README.md
-├── CITATION.cff
-├── analisis/
-│   └── Analisis_matematico.pdf
-├── biorender/
-│   └── Biorender.png
-├── figuras/
-│   ├── respuesta_simulink.png
-│   ├── _matlab.pdf
-│   ├── _matlabEDOsys.pdf
-│   └── _matlabsimulink.pdf
-├── matlab/
-│   ├── Castro23212184.mlx
-│   └── elsistema.slx
-└── python/
-    └── modeladopython.py
+├── LICENSE
+├── Análisismatematico.pdf
+├── Biorender.png
+├── Castro23212184.mlx
+├── elsistema.slx
+├── modeladopython.py
+├── controlador pi caso.jpg
+└── Imágenes python,matlab/
+    ├── Musculoesqueletico_python.pdf
+    ├── _matlab.pdf
+    ├── _matlabEDOsys.pdf
+    └── _matlabsimulink.pdf
 ```
 
-**Archivos principales:** [Cuaderno de MATLAB](matlab/Castro23212184.mlx) · [Modelo de Simulink](matlab/elsistema.slx) · [Script de Python](python/modeladopython.py) · [Análisis matemático](analisis/Analisis_matematico.pdf) · [BioRender](biorender/Biorender.png).
+**Archivos principales:** [Cuaderno de MATLAB](Castro23212184.mlx) · [Modelo de Simulink](elsistema.slx) · [Script de Python](modeladopython.py) · [Análisis matemático](Ana%CC%81lisismatematico.pdf) · [BioRender](Biorender.png).
 
 ### Reproducir en MATLAB / Simulink
 
 1. Abrir MATLAB con Simulink y Simscape Electrical disponibles.
-2. Establecer la carpeta `matlab/` como directorio de trabajo.
-3. Abrir el archivo `Castro23212184.mlx` y comprobar que `elsistema.slx` se encuentre en esa misma carpeta.
+2. Usar la carpeta principal del repositorio como directorio de trabajo.
+3. Abrir el archivo `Castro23212184.mlx` y comprobar que `elsistema.slx` esté en la misma carpeta principal.
 4. Ejecutar el cuaderno y consultar las gráficas y las señales almacenadas.
 
 ### Reproducir en Python
@@ -301,7 +302,7 @@ Desde el directorio principal del repositorio:
 
 ```bash
 python -m pip install numpy matplotlib control
-python python/modeladopython.py
+python modeladopython.py
 ```
 
 El programa guarda la figura `Musculoesqueletico_python.pdf` en el directorio desde el cual se ejecuta.
